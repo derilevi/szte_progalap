@@ -1,0 +1,3 @@
+HTMYAUOLJWPESCXRGZNDKVQFIB
+K
+linearmethodsforregression

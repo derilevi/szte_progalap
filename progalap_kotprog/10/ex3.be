@@ -1,0 +1,3 @@
+ABCDEFGHIJKLMNOPQRSTUVWXZY
+K
+linearmethodsforclassification

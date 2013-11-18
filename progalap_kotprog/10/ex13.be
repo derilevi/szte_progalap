@@ -1,0 +1,3 @@
+xhtmyauolrgzndkvqfibjwpesc
+K
+MULTIPLEregressionFROMsimpleUNIVARIATEregression

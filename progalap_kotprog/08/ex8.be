@@ -1,0 +1,3 @@
+2 6
+CODING
+cylimzcydzwgjcjgzoprhvxounhzryusvwxgvyhtyncnxlaoc

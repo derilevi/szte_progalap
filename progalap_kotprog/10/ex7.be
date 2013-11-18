@@ -1,0 +1,3 @@
+FIBJWPESTMYAUOLRGZNDKVQCXH
+K
+lineardiscriminantanalysis
