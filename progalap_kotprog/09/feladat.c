@@ -1,6 +1,11 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+/*
+09. Bináris és decimális számrendszerek közötti átváltás törtekkel együtt
+hatvany: hatványozás
+szetvalaszt: egészrész és törtrész szétválasztása
+tizesbe: szám átváltása kettesből tizesbe
+tizesbol: szám átváltása tizesből kettesbe
+*/
 typedef struct {
 	int egeszresz;
 	int tortresz;
@@ -39,10 +44,12 @@ void tizesbe (char *szam, char *atvaltott) {
 	long double eredmeny=0.0, torteredmeny=0.0, tortjegy;
 	hossz h;
 	h=szetvalaszt(szam, egeszresz, tortresz);
+	// egészrész átváltása
 	for (i=0;egeszresz[i]!=0;i++) {
 		szamjegy=egeszresz[i]-48;
 		eredmeny+=szamjegy*hatvany(2,h.egeszresz-i-1);
 	}
+	// törtrész átváltása
 	if (h.tortresz!=0) {
 		for (i=0;tortresz[i]!=0;i++) {
 			tortjegy=tortresz[i]-48;
@@ -64,6 +71,7 @@ void tizesbol (char *szam, char *atvaltott) {
 	long double tortmaradek=0, tortszamjegy;
 	hossz h;
 	h=szetvalaszt(szam, egeszresz, tortresz);
+	// egészrész átváltása
 	for (i=0;i<h.egeszresz;i++) {
 		szamjegy=egeszresz[i]-48;
 		maradek=maradek*10+szamjegy;
@@ -82,6 +90,7 @@ void tizesbol (char *szam, char *atvaltott) {
 		maradek=maradek%hatvany(2,kitevo-i-1);
 		atvaltott[i]=48+szamjegy;
 	}
+	// törtrész átváltása
 	if (h.tortresz!=0) {
 		atvaltott[i]='.';
 		i++;

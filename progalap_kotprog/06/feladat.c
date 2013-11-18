@@ -1,16 +1,18 @@
 #include <stdio.h>
-#include <stdlib.h>
-
+/*
+06. Fa magassága
+fa bejarasa, magassag megallapitasa
+*/
 int mag(int i, int t[1000][1000], int t1[1000]) {
 	int j, k=0, k1;
 	for (j=0; j<t1[i]; j++) {
-	k1=mag(t[i][j], t, t1)+1;
-	if (k1>k)
-		k=k1;
+		k1=mag(t[i][j], t, t1)+1;
+		if (k1>k) {
+			k=k1;
+		}
 	}
 	return k;
 }
-
 int main () {
 	FILE *be, *ki;
 	int sorszam,i,j,elso, tomb[1000][1000], tomb1[1000];

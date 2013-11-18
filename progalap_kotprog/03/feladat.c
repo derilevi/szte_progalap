@@ -1,5 +1,10 @@
 #include <stdio.h>
-#include <stdlib.h>
+/*
+03. Számolás valódi törtekkel, egyszerűsítéssel együtt
+szamol: elvégzi a műveleteket
+lnko: kiszámolja 2 szám legnagyobb közös osztóját
+egyszerusit: egyszerűsíti a törtet
+*/
 typedef struct {
 	int sz;
 	int n;
