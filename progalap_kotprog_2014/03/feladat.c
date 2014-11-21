@@ -1,6 +1,6 @@
 #include <stdio.h>
 /*
-09. Bináris és decimális számrendszerek közötti átváltás törtekkel együtt
+03. Bináris és decimális számrendszerek közötti átváltás törtekkel együtt
 hatvany: hatványozás
 szetvalaszt: egészrész és törtrész szétválasztása
 tizesbe: szám átváltása kettesből tizesbe
@@ -40,7 +40,7 @@ hossz szetvalaszt (char *szam, char *egeszresz, char *tortresz) {
 }
 void tizesbe (char *szam, char *atvaltott) {
 	int i,szamjegy;
-	char egeszresz[61], tortresz[61], torteredmenys[19];
+	char egeszresz[61], tortresz[61];
 	long double eredmeny=0.0, torteredmeny=0.0, tortjegy;
 	hossz h;
 	h=szetvalaszt(szam, egeszresz, tortresz);
@@ -58,11 +58,7 @@ void tizesbe (char *szam, char *atvaltott) {
 			}
 		}
 	}
-	// HACK!!!
-	sprintf(torteredmenys,"%.16Lf",torteredmeny);
-	for (i=0;i<15;i++) { torteredmenys[i]=torteredmenys[i+2]; }
-	torteredmenys[15]=0;
-	sprintf(atvaltott,"%.0Lf.%s",eredmeny,torteredmenys);
+	sprintf(atvaltott,"%.0Lf.%015lld",eredmeny,(long long int)(torteredmeny*(hatvany(10,15))));
 }
 void tizesbol (char *szam, char *atvaltott) {
 	int i,j,szamjegy,kitevo=1;

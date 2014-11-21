@@ -1,0 +1,3 @@
+DKVQFIBJWPESCXHTMYAUOLRGZN
+K
+ezamasodikkotelezoprogramomamiKODOLesDEKODOL
